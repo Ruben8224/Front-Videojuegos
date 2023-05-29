@@ -12,7 +12,8 @@ import {
 
 // 2
 const httpLink = createHttpLink({
-  uri: 'https://rubencastillo1234-rubencastillo1234.cloud.okteto.net/graphql/'
+  uri: 'http://127.0.0.1:8000/graphql/'
+  //uri: 'https://rubencastillo1234-rubencastillo1234.cloud.okteto.net/graphql/'
 });
 
 // 3

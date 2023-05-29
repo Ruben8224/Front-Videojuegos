@@ -17,6 +17,7 @@ query {
     musica
     version
     precio
+    comentarios
   }
   }
 `
@@ -72,6 +73,9 @@ const JuegosList = () => {
                 </div>
 
                 <div className='subtitle'> Version del juego:
+                  <span className='texto'> {top.version} </span>
+                </div>
+                <div className='subtitle'> Comentarios:
                   <span className='texto'> {top.version} </span>
                 </div>
                 

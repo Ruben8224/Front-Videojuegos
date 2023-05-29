@@ -31,6 +31,7 @@ export const Informacion = () => {
         <li>Precio del juego</li>
         <li>Musica del juego</li>
         <li>version actual!!</li>
+        <li>Comentarios</li>
       </section>
     </div>
   );
