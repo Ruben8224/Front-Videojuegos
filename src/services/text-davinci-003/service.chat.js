@@ -6,6 +6,7 @@ class ServiceChat {
         const configuration = new Configuration({
             apiKey: "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",
         });
+        
         const openai = new OpenAIApi(configuration);
         console.log(configuration);
         console.log(data.chat);
@@ -60,7 +61,7 @@ class ServiceChat {
                 }
             }
         }
-        return;
+        
     }
 
     generatePrompt(chat) {

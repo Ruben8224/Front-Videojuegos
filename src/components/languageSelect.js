@@ -1,5 +1,4 @@
 import React from "react";
-import { useTranslation } from "react-i18next";
 import i18next from "i18next";
 
 const languageMap = {
@@ -10,10 +9,9 @@ const languageMap = {
 
 const LanguageSelect = () => {
   const selected = localStorage.getItem("i18nextLng") || "en";
-  const { t } = useTranslation();
   
 
-  const [ menuAnchor, setMenuAnchor] = React.useState(null);
+  const [ menuAnchor, ] = React.useState(null);
   
 
   React.useEffect(() => {
