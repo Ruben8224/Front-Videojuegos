@@ -14,9 +14,8 @@ mutation PostMutation(
   $musica: String!
   $version: String!
   $precio: Int!
-  $comentarios: String!
   ) {
-    createGame(juego: $juego, fechaDeLanzamiento: $fechaDeLanzamiento, descripcion: $descripcion, tipo: $tipo, creador: $creador, personajes: $personajes, enemigos: $enemigos, musica: $musica, version: $version, precio: $precio, comentarios: $comentarios) {
+    createGame(juego: $juego, fechaDeLanzamiento: $fechaDeLanzamiento, descripcion: $descripcion, tipo: $tipo, creador: $creador, personajes: $personajes, enemigos: $enemigos, musica: $musica, version: $version, precio: $precio) {
       id
       juego
       fechaDeLanzamiento
@@ -28,7 +27,6 @@ mutation PostMutation(
       musica
       version
       precio
-      comentarios
   }
   }
 `;
@@ -47,7 +45,6 @@ const CreateJuegos = () => {
     musica: '',
     version: '',
     precio: 0,
-    comentarios: ''
   });
 
   const [CreateJuegos] = useMutation(CREATE_JUEGO_MUTATION, {
@@ -62,7 +59,6 @@ const CreateJuegos = () => {
       musica: formState.musica,
       version: formState.version,
       precio: formState.precio,
-      comentarios: formState.comentarios,
     }
   });
 
@@ -84,7 +80,6 @@ const CreateJuegos = () => {
         <p class="Espacio Espacio2">Musica: </p>
         <p class="Espacio Espacio2">version: </p>
         <p class="Espacio Espacio2">Precio: </p>
-        <p class="Espacio Espacio2">Comentarios: </p>
       </div>
 
       <div id="Formulario-Rellenar" >
@@ -149,12 +144,6 @@ const CreateJuegos = () => {
             <input className="Respuesta" value={formState.precio} onChange={(e) =>
               setFormState({ ...formState, precio: e.target.value })}
               type="number" placeholder="precio del juego" />
-          </div>
-
-          <div className="Espacio" >
-            <input className="Respuesta" value={formState.comentarios} onChange={(e) =>
-              setFormState({ ...formState, comentarios: e.target.value })}
-              type="text" placeholder="comentarios del juego" />
           </div>
 
           <div id="Formulario-Boton">

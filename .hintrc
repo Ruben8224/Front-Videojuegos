@@ -7,8 +7,7 @@
       "default",
       {
         "ignore": [
-          "width: fit-content",
-          "max-height: fit-content"
+          "width: fit-content"
         ]
       }
     ]
